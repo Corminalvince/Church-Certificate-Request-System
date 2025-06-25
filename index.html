@@ -1,1 +1,191 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Baptismal Record Search</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1e1e1e;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #2a2a2a;
+      padding: 30px 20px;
+      height: 100vh;
+    }
+
+    .sidebar h2 {
+      font-size: 20px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .search-box {
+      background: #3a3a3a;
+      padding: 10px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-box input {
+      border: none;
+      background: none;
+      outline: none;
+      color: #fff;
+      margin-left: 10px;
+      flex: 1;
+    }
+
+    .main {
+      flex: 1;
+      background-color: #f5f5f5;
+      color: #000;
+      padding: 20px 40px;
+    }
+
+    .main-header {
+      background-color: #ddd;
+      padding: 15px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .search-bar {
+      background-color: #ccc;
+      border-radius: 25px;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+    }
+
+    .search-bar input {
+      border: none;
+      background: none;
+      outline: none;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th, td {
+      border: 1px solid #aaa;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #eaeaea;
+    }
+
+    .pagination {
+      margin: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .page-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 12px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="sidebar">
+    <h2>CHURCH<br>NAME</h2>
+    <div class="search-box">
+      🔍
+      <input type="text" placeholder="Search Baptismal Record" />
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="main-header">SEARCH BAPTISMAL RECORD</div>
+
+    <div class="search-bar">
+      <input type="text" value="Juan Dela Cruz" />
+      🔍
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Child's Name</th>
+          <th>Parent's Fullname</th>
+          <th>Date of Birth</th>
+          <th>Place of Birth</th>
+          <th>GodParent/Sponsor's Name</th>
+          <th>Date of Baptism</th>
+          <th>Place of Baptism</th>
+          <th>Officiating Priest</th>
+          <th>Parish Priest</th>
+          <th>Date Created</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Sample rows (you can loop or fetch from backend later) -->
+        <tr>
+          <td>Juan Dela Cruz</td>
+          <td>Maria Lopez<br>Jose Dela Cruz</td>
+          <td>01/10/2021</td>
+          <td>Quezon City</td>
+          <td>Ana Reyes<br>Carlos Santos</td>
+          <td>02/15/2021</td>
+          <td>St. John Church</td>
+          <td>Rev. Fr. Antonio Rivera</td>
+          <td>Rev. Fr. Leo Martinez</td>
+          <td>06/18/2025</td>
+        </tr>
+        <!-- Repeat as needed -->
+      </tbody>
+    </table>
+
+    <div class="pagination">
+      <span>SHOWING 1 TO 20 of 100 entries</span>
+      <div class="page-buttons">
+        <button>&lt;</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <span>...</span>
+        <button>10</button>
+        <button>&gt;</button>
+      </div>
+    </div>
+
+    <div class="footer">
+      © Copyright [Parish Name] Certificate Request System. All rights reserved.
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
